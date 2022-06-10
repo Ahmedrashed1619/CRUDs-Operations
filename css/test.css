@@ -1,0 +1,17 @@
+
+body{
+    background-color: #24353f;
+}
+h1 , h3{
+    color: #ccc;
+}
+.w-45{
+    width: 47%;
+}
+.line{
+    height: 0.05rem;
+    background-color: #ccc;
+}
+.bg-body{
+    background-color: rgb(95, 138, 160) !important;
+}
