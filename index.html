@@ -10,29 +10,41 @@
    </head>
    <body>
 
-      <section class="d-flex justify-content-center align-items-center flex-column">
-         <header class="container pt-4 pb-3">
-            <h1 class="fs-2 fw-bold">CRUDs Products</h1>
-         </header>
-         <div class="line w-100 mt-2 mb-3"></div>
-         <div class="container">
-            <div class="w-75 mx-auto bg-body p-5">
-               <h2 class="fs-3 fw-bold text-center text-decoration-underline mb-5">Data of Products..</h2>
-               <input  id="pName" type="text"  placeholder="Product Name.." class="form-control mb-2">
-               <div id="alertName" class="alert alert-danger p-2 text-center d-none">Product Name Should be consist of a statement consists of a capital letter and 2-10 small letters...</div>
-               <input  id="pPrice" type="number"  placeholder="Product Price.." class="form-control mb-2">
-               <div id="alertPrice" class="alert alert-danger p-2 text-center d-none">Product Price Should be in range from 50-10000 $...</div>
-               <input  id="pCat" type="text"  placeholder="Product Category.." class="form-control mb-2">
-               <div id="alertCate" class="alert alert-danger p-2 text-center d-none">Product Name Should be same Product Name...</div>
-               <textarea  id="pDesc" placeholder="Product Description.." class="form-control mb-2"></textarea>
-               <div id="alertDesc" class="alert alert-danger p-2 text-center d-none">Product Name Should be consist of a statement (Bad - IMedium - Good - V.good - Excellent)...</div>
-               <button class="btn btn-primary my-3 float-end" id="addBtn">Add Product</button>
-               <button class="btn btn-primary my-3 mx-3 float-end" id="resetBtn">Reset Form</button>
-               <button class="btn btn-primary my-3 float-start" id="updateBtn">Update Product</button>
-               <div class="clearfix"></div>
-               <input type="text" id="searchName" placeholder="Search with Name" class="form-control my-2 w-45 float-start text-center">
-               <input type="text" id="searchCate" placeholder="Search with Category" class="form-control my-2 w-45 float-end text-center">
-               <div class="clearfix"></div>
+      <header class="container pt-4 pb-3">
+         <h1 class="fs-2 fw-bold">CRUDs Products</h1>
+      </header>
+      
+      <div class="line w-100 mt-2 mb-3"></div>
+
+      <section class="container">
+         <div class="bg-body py-5 text-center">
+            <h2 class="fs-3 fw-bold text-decoration-underline mb-5">Data of Products..</h2>
+
+            <input  id="pName" type="text"  placeholder="Product Name.." class="form-control mb-2 w-75 mx-auto">
+            <div id="alertName" class="alert alert-danger p-2 w-75 mx-auto d-none">Should be consisting of a statement consists of a capital letter and 2-10 small letters...</div>
+
+            <input  id="pPrice" type="number"  placeholder="Product Price.." class="form-control mb-2 w-75 mx-auto">
+            <div id="alertPrice" class="alert alert-danger p-2 w-75 mx-auto d-none">Product Price Should be in range from 50-10000 $...</div>
+
+            <input  id="pCat" type="text"  placeholder="Product Category.." class="form-control mb-2 w-75 mx-auto">
+            <div id="alertCate" class="alert alert-danger p-2 w-75 mx-auto d-none">Product Name Should be same Product Name...</div>
+
+            <textarea  id="pDesc" placeholder="Product Description.." class="form-control mb-2 w-75 mx-auto"></textarea>
+            <div id="alertDesc" class="alert alert-danger p-2 w-75 mx-auto d-none">Product Name Should be consist of a statement (Bad - IMedium - Good - V.good - Excellent)...</div>
+
+            <div class="buttons w-75 mx-auto">
+               <div class="row g-0">
+                  <div class="col-6 text-start">
+                     <button class="btn btn-primary mt-3 p-2" id="updateBtn">Update Product</button>
+                  </div>
+                  <div class="col-6 text-end">
+                     <button class="btn btn-primary mt-3 me-2 p-2" id="resetBtn">Reset Form</button>
+                     <button class="btn btn-primary mt-3 p-2" id="addBtn">Add Product</button>
+                  </div>
+               </div>
+            </div>
+
+            <div class="w-75 mx-auto">
                <table class="table table-striped mt-4 text-center">
                   <thead>
                      <th>index</th>
@@ -49,11 +61,13 @@
                </table>
             </div>
          </div>
-         <div class="line w-100 my-3"></div>
-         <footer class="container py-3 text-center">
-            <h3 class="fs-6 fw-bold">&copy; 2022 CRUDs Products Info..</h3>
-         </footer>
       </section>
+
+      <div class="line w-100 my-3"></div>
+
+      <footer class="container py-3 text-center">
+         <h3 class="fs-6 fw-bold">&copy; 2022 CRUDs Products Info..</h3>
+      </footer>
 
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/main.js"></script>

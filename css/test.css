@@ -2,16 +2,19 @@
 body{
     background-color: #24353f;
 }
+.bg-body{
+    background-color: rgb(95, 138, 160) !important;
+}
 h1 , h3{
     color: #ccc;
-}
-.w-45{
-    width: 47%;
 }
 .line{
     height: 0.05rem;
     background-color: #ccc;
 }
-.bg-body{
-    background-color: rgb(95, 138, 160) !important;
+@media screen and (min-width: 768px){
+    .table{
+        width: 100% !important;
+        /* margin: auto !important; */
+    }
 }
