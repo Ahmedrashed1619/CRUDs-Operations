@@ -33,7 +33,7 @@ addBtn.onclick = function(){
         }
         else if(isProductExist ())
         {
-            alert('This Product already exist');
+            alert('This Product already exist , You can make an edit not add .!');
             resetForm();
             return 1;
         }
@@ -61,6 +61,7 @@ updateBtn.onclick = function(){
     displayProduct();
     resetForm ();
     updateBtn.style.display = "none";
+    addBtn.style.display = 'inline-block';
 }
 
 function addProduct (){
@@ -113,7 +114,7 @@ function getProductInfo (index){
         productPriceInp.value = currentProduct.price;
         productCategoryInp.value = currentProduct.cate;
         productDescriptionInp.value = currentProduct.desc;
-        updateBtn.style.display = "block";
+        updateBtn.style.display = "inline-block";
         addBtn.style.display = 'none';
 }
 
@@ -126,7 +127,6 @@ function updateProduct (){
     }
     products[currentIndex] = product;
     localStorage.setItem('productsList' , JSON.stringify(products));
-    addBtn.style.display = 'block';
 }
 
 function searchName(searchText){
@@ -169,7 +169,7 @@ function searchCate(searchText){
 
 
 function validProductName (){
-    var regexName = /^[A-Z][a-z]{2,10}$/;
+    var regexName = /^[A-Z][a-z0-9]{2,10}$/;
     if(regexName.test(productNameInp.value))
     {
         productNameInp.classList.add('is-valid');
