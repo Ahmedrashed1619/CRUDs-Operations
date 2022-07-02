@@ -15,3 +15,9 @@ h1 , h3{
 textarea{
     resize: none;
 }
+@media screen and (max-width: 992px) {
+    .table-scroll{
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
